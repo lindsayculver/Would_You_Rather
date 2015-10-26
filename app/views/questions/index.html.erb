@@ -1,12 +1,12 @@
 <h1>Welcome to "Would You Rather...?"</h1>
 
-<% if @questions.any? %>
-  <% @questions.each do |question| %>
+<% if @options.any? %>
+  <% @options.each do |option| %>
     <div class="container-fluid">
       <h3>Would you rather...</h3>
-      <% question.answers.each do |answer| %>
+      <% options.each do |option| %>
         <div class="container-fluid">
-          <%= answer.text %>
+          <%= option.text %>
         </div>
         <% end %>
     <% end %>

@@ -1,12 +1,12 @@
-<%= form_for [@question, @answer] do |f| %>
+<%= form_for [@option] do |f| %>
   <div class="form-group">
     <%= f.label "Answer A" %>
     <%= f.text_field :text, class: "form-control" %>
     <%= f.label "Answer B" %>
     <%= f.text_field :text, class: "form-control" %>
   </div>
-  <%= question_form.fields_for :answer do |answer_fields| %>
-  <%= answer_fields.text_field :text %>
+  <%= question_form.fields_for :option do |option_fields| %>
+  <%= option_fields.text_field :text %>
   <% end %>
 
   <%= f.submit "Submit", class: "btn btn-default center-block" %>

@@ -1,4 +1,4 @@
-class Answer < ActiveRecord::Base
-  belongs_to :question
+class Option < ActiveRecord::Base
+  has_many :answer
   validates :text, :presence => true
 end
