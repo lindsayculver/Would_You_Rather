@@ -1,12 +1,16 @@
 <h1>Welcome to "Would You Rather...?"</h1>
 
-<% @questions.each do |question| %>
-  <div class="container-fluid">
-    <h3>Would you rather...</h3>
-    <% question.answers.each do |answer| %>
-      <div class="container-fluid">
-        <%= answer.text %>
-      </div>
+<% if @questions.any? %>
+  <% @questions.each do |question| %>
+    <div class="container-fluid">
+      <h3>Would you rather...</h3>
+      <% question.answers.each do |answer| %>
+        <div class="container-fluid">
+          <%= answer.text %>
+        </div>
+        <% end %>
     <% end %>
-  </div>
-<% end %>
+  <% end %>
+<%= link_to "Add Question", new_question_path %>
+
+</div>
